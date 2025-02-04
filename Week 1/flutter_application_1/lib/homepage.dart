@@ -86,9 +86,14 @@ class _HomepageState extends State<Homepage> {
         ),
       ),
       bottomNavigationBar: BottomNavigationBar(
+        selectedItemColor: const Color.fromARGB(255, 105, 209, 187),
+        unselectedItemColor: const Color.fromARGB(255, 9, 52, 46),
+        showSelectedLabels: false,
         items: const [
           BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Home'),
           BottomNavigationBarItem(icon: Icon(Icons.search), label: 'Search'),
+          BottomNavigationBarItem(icon: Icon(Icons.person), label: 'Profile'),
+          BottomNavigationBarItem(icon: Icon(Icons.settings), label: 'Settings'),
         ]        
       ),
     );
