@@ -11,6 +11,17 @@ class _CheckoutState extends State<Checkout> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        centerTitle: true,
+        title: const Text("Checkout"),
+        titleTextStyle: TextStyle(
+          fontWeight: FontWeight.bold,
+          fontSize: 40,
+          color: Colors.black,
+        ),
+
+
+      ),
       body:
       Center(
           child: Container(
