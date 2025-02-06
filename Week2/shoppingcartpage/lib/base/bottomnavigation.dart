@@ -1,6 +1,8 @@
 import 'package:fluentui_icons/fluentui_icons.dart';
 import 'package:flutter/material.dart';
 import 'package:shoppingcartpage/pages/checkout.dart';
+import 'package:shoppingcartpage/pages/home.dart';
+import 'package:shoppingcartpage/pages/settings.dart';
 
 class Bottomnavigation extends StatefulWidget {
   const Bottomnavigation({super.key, required String title});
@@ -11,8 +13,8 @@ class Bottomnavigation extends StatefulWidget {
 
 class _BottomnavigationState extends State<Bottomnavigation> {
   final appScreens = [
-    const Center(child: Text("Home")),
-    const Center(child: Text("Settings")),
+    const Home(),
+    const MySettingsPage(),
     const Checkout(),
     const Center(child: Text("Profile"))
   ];
@@ -28,18 +30,6 @@ class _BottomnavigationState extends State<Bottomnavigation> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        // appBar: AppBar(
-        //   elevation: 4.0,
-        //   backgroundColor: const Color.fromARGB(221, 97, 64, 64),
-        //   shadowColor: Colors.black26,
-        //   toolbarHeight: 100,
-        //   automaticallyImplyLeading: false,
-        //   leading: const IconButton(
-        //     icon: Icon(Icons.arrow_back),
-        //     onPressed: null,
-        //   ),
-        //   centerTitle: true,
-        // ),
         body:
         appScreens[currentPageIndex],
         bottomNavigationBar: BottomNavigationBar(
