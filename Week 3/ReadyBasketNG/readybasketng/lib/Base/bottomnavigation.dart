@@ -7,6 +7,7 @@ import 'package:readybasketng/screens/wishlist.dart';
 
 class BottomNavigation extends StatefulWidget {
   const BottomNavigation({super.key});
+  
 
   @override
   State<BottomNavigation> createState() => _BottomNavigationState();
@@ -14,18 +15,30 @@ class BottomNavigation extends StatefulWidget {
 
 class _BottomNavigationState extends State<BottomNavigation> {
 
-  var pageList = [
+  final pageList = [
     const HomeScreen(),
     const WishList(),
     const CheckOut(),
     const MyAccount(),
   ];
 
+  int currentPageIndex = 0;
+
+  void bottomNavigationBarTap(int currentIndex) {
+    setState(() {
+      currentPageIndex = currentIndex;
+    });
+  }
+
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      body: pageList[currentPageIndex],
       bottomNavigationBar: BottomNavigationBar(
+        currentIndex: currentPageIndex,
+        onTap: bottomNavigationBarTap,
+        selectedItemColor: Colors.blue,
         type: BottomNavigationBarType.fixed,
         items: [
           BottomNavigationBarItem(
