@@ -32,7 +32,7 @@ class Bestpickswidget extends StatelessWidget {
             offset: Offset(0, 2),
           )
         ],
-        color: Colors.white,
+        color: const Color(0XFFC8E6C9),
       ),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -54,10 +54,10 @@ class Bestpickswidget extends StatelessWidget {
                 margin: EdgeInsets.all(10),
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(100),
-                  color: Colors.red,
+                  color: const Color(0xFFFFC107),
                 ),
                 child: IconButton(
-                  onPressed: null,
+                  onPressed: (){},
                   icon: Icon(
                       FluentSystemIcons.ic_fluent_heart_filled),
                 ),
@@ -106,10 +106,10 @@ class Bestpickswidget extends StatelessWidget {
                 margin: EdgeInsets.all(10),
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(100),
-                  color: Colors.red,
+                  color: Color(0xFFFFC107),
                 ),
                 child: IconButton(
-                  onPressed: null,
+                  onPressed: (){},
                   icon: Icon(
                       FluentSystemIcons.ic_fluent_add_filled),
                 ),

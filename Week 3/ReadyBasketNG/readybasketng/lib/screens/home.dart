@@ -13,7 +13,7 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
+      backgroundColor: Color(0XFF388E3C),
       body: ListView(
         children: [
           Container(
@@ -26,12 +26,12 @@ class _HomeScreenState extends State<HomeScreen> {
                   children: [
                     IconButton(
                       icon: Icon(Icons.menu),
-                      onPressed: null,
+                      onPressed: (){},
                     ),
                     SizedBox(
                       width: 100,
                       child: ElevatedButton(
-                        onPressed: null,
+                        onPressed: (){},
                         child: Icon(
                           FluentSystemIcons.ic_fluent_person_regular,
                         ),
@@ -61,7 +61,7 @@ class _HomeScreenState extends State<HomeScreen> {
                             IconButton(
                               icon: Icon(
                                   FluentSystemIcons.ic_fluent_search_regular),
-                              onPressed: null,
+                              onPressed: (){},
                             ),
                             Text("Search"),
                           ],
@@ -72,7 +72,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       width: 100,
                       child: IconButton(
                         icon: Icon(Icons.shopping_cart),
-                        onPressed: null,
+                        onPressed: (){},
                       ),
                     ),
                   ],
@@ -82,10 +82,9 @@ class _HomeScreenState extends State<HomeScreen> {
           ),
           Container(
             padding: const EdgeInsets.all(20),
-            
             decoration: BoxDecoration(
               borderRadius: BorderRadius.only(topLeft: Radius.circular(40),topRight: Radius.circular(40)),
-              color: const Color.fromARGB(255, 235, 226, 226),
+              color: const Color(0xFF4CAF50),
             ),
             child: Column(children: [
               Row(children: [
@@ -93,6 +92,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     style: TextStyle(
                       fontWeight: FontWeight.bold,
                       fontSize: 30,
+                      color: Color(0XFFFFFFFF),
                     ),
                     "Best Picks"),
               ]),
@@ -104,8 +104,8 @@ class _HomeScreenState extends State<HomeScreen> {
                   padding: EdgeInsets.only(top: 10, bottom: 10),
                   children: [
                     Bestpickswidget(itemImageNumber: 2, itemName: "Item Name", itemDescription: "Description", itemPrice: 149.86),
-                    Bestpickswidget(itemImageNumber: 1, itemName: "Item Name", itemDescription: "Description", itemPrice: 149.86),
                     Bestpickswidget(itemImageNumber: 4, itemName: "Item Name", itemDescription: "Description", itemPrice: 149.86),
+                    Bestpickswidget(itemImageNumber: 1, itemName: "Item Name", itemDescription: "Description", itemPrice: 149.86),
                     Bestpickswidget(itemImageNumber: 7, itemName: "Item Name", itemDescription: "Description", itemPrice: 149.86),
                     Bestpickswidget(itemImageNumber: 8, itemName: "Item Name", itemDescription: "Description", itemPrice: 149.86),
                     Bestpickswidget(itemImageNumber: 5, itemName: "Item Name", itemDescription: "Description", itemPrice: 149.86),
@@ -116,8 +116,12 @@ class _HomeScreenState extends State<HomeScreen> {
               ),
             ]),
           ),
+          Container(
+            
+          ),
         ],
       ),
+      
     );
   }
 }
